@@ -73,14 +73,14 @@ export default function Home() {
 
         <section className="install shell" id="install">
           <div className="install-copy">
-            <p className="eyebrow"><span /> Two commands</p><h2>Install once.<br />Remember everywhere.</h2>
-            <p>Install the CLI, then let Agent LCM detect and connect the agent harnesses already on your machine.</p>
-            <a href={github + "#install-in-each-harness"}>Harness-specific setup <span aria-hidden="true">↗</span></a>
+            <p className="eyebrow"><span /> Start here</p><h2>Install the CLI.<br />Connect each harness.</h2>
+            <p>Run these commands for the CLI and capture hooks. Then install the Agent LCM plugin in each harness you use.</p>
+            <a href={github + "#install-in-each-harness"}>Plugin setup by harness <span aria-hidden="true">↗</span></a>
           </div>
           <div className="code-shell">
             <div className="code-bar"><span><i /><i /><i /></span><b>TERMINAL</b></div>
             <pre><code><span className="prompt">$</span> npm install --global @team-volt/agent-lcm{"\n"}<span className="prompt">$</span> agent-lcm setup all</code></pre>
-            <div className="code-result"><span className="check">✓</span><div><b>Ready</b><small>Hooks installed · daemon starts on demand</small></div></div>
+            <div className="code-result"><span className="check">✓</span><div><b>CLI and hooks ready</b><small>Next: install the plugin in each harness</small></div></div>
           </div>
         </section>
 
