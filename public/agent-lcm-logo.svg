@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Agent LCM logo</title>
+  <desc id="desc">Three shortening signal bars and a dot in a lime memory core on black.</desc>
+  <rect width="1024" height="1024" rx="224" fill="#050505"/>
+  <rect x="168" y="168" width="688" height="688" rx="192" fill="#DFFF52"/>
+  <path d="M308 362h300M308 492h208M308 622h116" fill="none" stroke="#10130A" stroke-width="72" stroke-linecap="round"/>
+  <circle cx="680" cy="492" r="42" fill="#10130A"/>
+</svg>
