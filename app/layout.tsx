@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://agent-lcm.com"),
   title: "Agent LCM — One shared memory for coding agents",
-  description: "Shared local-first lossless context memory for Codex, Cursor, VS Code, GitHub Copilot, and Kiro.",
+  description: "Shared local-first lossless context memory for Codex, Cursor, VS Code, GitHub Copilot, Kiro, and Claude Code.",
   alternates: { canonical: "/" },
   icons: {
     icon: "/favicon.svg",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Agent LCM",
     type: "website",
-    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Five coding-agent sessions converging into Agent LCM shared memory" }],
+    images: [{ url: "/og.png", width: 1731, height: 909, alt: "Coding-agent sessions converging into Agent LCM shared memory" }],
   },
   twitter: {
     card: "summary_large_image",
