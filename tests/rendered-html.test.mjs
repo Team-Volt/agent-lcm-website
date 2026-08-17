@@ -21,7 +21,7 @@ test("server-renders the Agent LCM landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Agent LCM — One shared memory for coding agents<\/title>/i);
-  assert.match(html, /Every coding agent\./);
+  assert.match(html, /Every coding agent\.<br\/?><em>One shared context\.<\/em>/);
   assert.match(html, /npm install --global @team-volt\/agent-lcm/);
   assert.match(html, /https:\/\/github\.com\/Team-Volt\/agent-lcm/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);

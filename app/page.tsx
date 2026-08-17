@@ -30,7 +30,7 @@ export default function Home() {
         <section className="hero shell">
           <div className="hero-copy">
             <p className="eyebrow"><span /> Open source · local first</p>
-            <h1>Every coding agent.<br /><em>One shared memory.</em></h1>
+            <h1>Every coding agent.<br /><em>One shared context.</em></h1>
             <p className="hero-lede">Agent LCM captures work from Codex, Cursor, VS Code, GitHub Copilot, Kiro, and Claude Code, then makes that history searchable from any of them.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#install">Install Agent LCM <span aria-hidden="true">↓</span></a>
