@@ -14,7 +14,7 @@ function parseSetupIds(readme) {
 }
 
 test("product facts match the agent-lcm README install table", async () => {
-  const response = await fetch(README_URL);
+  const response = await fetch(README_URL, { signal: AbortSignal.timeout(15_000) });
   assert.equal(response.ok, true, `README fetch failed: ${response.status} ${README_URL}`);
   const readme = await response.text();
   const readmeIds = parseSetupIds(readme);
@@ -26,10 +26,10 @@ test("product facts match the agent-lcm README install table", async () => {
     `site harness ids ${localIds.join(",")} vs README ${readmeIds.join(",")}`,
   );
 
-  if (/import sessions already stored under `~\/\.claude\/projects`/i.test(readme)
+  const supportsClaudeImport = /import sessions already stored under `~\/\.claude\/projects`/i.test(readme)
     || /Import sessions that Claude Code already saved/i.test(readme)
-    || /Capture Claude Code sessions through live hooks and import sessions/i.test(readme)) {
-    const claude = facts.harnesses.find((harness) => harness.id === "claude");
-    assert.equal(claude?.importPolicy, "supported");
-  }
+    || /Capture Claude Code sessions through live hooks and import sessions/i.test(readme);
+  assert.equal(supportsClaudeImport, true, "README does not explicitly confirm Claude Code session import support");
+  const claude = facts.harnesses.find((harness) => harness.id === "claude");
+  assert.equal(claude?.importPolicy, "supported");
 });
