@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { PRODUCT, joinLabels } from "@/lib/product-facts";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://agent-lcm.com"),
   title: "Agent LCM — One shared memory for coding agents",
-  description: "Shared local-first lossless context memory for Codex, Cursor, VS Code, GitHub Copilot, Kiro, and Claude Code.",
+  description: `Shared local-first lossless context memory for ${joinLabels(PRODUCT.harnesses.map((harness) => harness.label))}.`,
   alternates: { canonical: "/" },
   icons: {
     icon: "/favicon.svg",

@@ -1,0 +1,73 @@
+{
+  "name": "Agent LCM",
+  "github": "https://github.com/Team-Volt/agent-lcm",
+  "npmPackage": "@team-volt/agent-lcm",
+  "nodeRequirement": "Node.js 22.18 or newer",
+  "storePath": "~/.agent-lcm",
+  "installCommands": [
+    "npm install --global @team-volt/agent-lcm",
+    "agent-lcm setup all"
+  ],
+  "pluginSetupHash": "#install-in-each-harness",
+  "installReadyTitle": "CLI and hooks ready",
+  "pluginNextStep": "Next: install the plugin in each harness",
+  "harnesses": [
+    {
+      "id": "codex",
+      "label": "Codex",
+      "badge": "CX",
+      "sampleSessionId": "session_019f",
+      "setupCommand": "agent-lcm setup codex",
+      "importPolicy": "supported"
+    },
+    {
+      "id": "cursor",
+      "label": "Cursor",
+      "badge": "CU",
+      "sampleSessionId": "chat_7c31",
+      "setupCommand": "agent-lcm setup cursor",
+      "importPolicy": "supported"
+    },
+    {
+      "id": "vscode",
+      "label": "VS Code",
+      "badge": "VS",
+      "sampleSessionId": "thread_82ab",
+      "setupCommand": "agent-lcm setup vscode",
+      "importPolicy": "supported"
+    },
+    {
+      "id": "copilot",
+      "label": "GitHub Copilot",
+      "badge": "GH",
+      "sampleSessionId": "run_4e16",
+      "setupCommand": "agent-lcm setup copilot",
+      "importPolicy": "supported"
+    },
+    {
+      "id": "kiro",
+      "label": "Kiro",
+      "badge": "KR",
+      "sampleSessionId": "task_b911",
+      "setupCommand": "agent-lcm setup kiro",
+      "importPolicy": "supported"
+    },
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "badge": "CL",
+      "sampleSessionId": "session_a84c",
+      "setupCommand": "agent-lcm setup claude",
+      "importPolicy": "supported",
+      "importNote": "Claude Code also imports sessions already stored under ~/.claude/projects."
+    },
+    {
+      "id": "opencode",
+      "label": "OpenCode",
+      "badge": "OC",
+      "sampleSessionId": "session_c201",
+      "setupCommand": "agent-lcm setup opencode",
+      "importPolicy": "none"
+    }
+  ]
+}
